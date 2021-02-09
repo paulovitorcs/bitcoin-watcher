@@ -11,7 +11,7 @@ You can install Pushover app and subscribe into [this channel](https://pushover.
 ```bash
 python -m pip install -r requirements.txt
 ```
-- Do not forget to set `PUSHOVER_TOKEN` and `PUSHOVER_USER` on `.env`file
+- Do not forget to set `PUSHOVER_TOKEN` and `PUSHOVER_USER` on `.env` file
 - Run `run.py` file
 ```bash
 python run.py
