@@ -1,3 +1,4 @@
+import locale
 from requests import get
 
 class Bitcoin:
@@ -22,6 +23,7 @@ class Bitcoin:
         init bitcoin class
         """
         self.set_values()
+        locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
     def set_values(self):
         """
@@ -42,11 +44,17 @@ class Bitcoin:
         """
         bitcoin buy price
         """
-        return self.values['buyPrice']
+        buy_price = self.values['buyPrice']
+        buy_price = locale.currency(buy_price, grouping=True, symbol=None)
+
+        return buy_price
 
     @property
     def sell_price(self):
         """
         bit coin sell price
         """
-        return self.values['sellPrice']
+        sell_price = self.values['sellPrice']
+        buy_price = locale.currency(buy_price, grouping=True, symbol=None)
+
+        return sell_price
