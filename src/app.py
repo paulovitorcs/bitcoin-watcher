@@ -1,5 +1,6 @@
 import schedule
 import logging
+import time
 
 from .bitcoin import Bitcoin
 from .pushover import Pushover
@@ -15,6 +16,11 @@ class App:
         self.schedule_routine()
 
     def start_routine(self):
+        while True:
+            self.run_routine()
+            time.sleep(1)
+
+    def run_routine(self):
         """
         start routine
         """
@@ -24,10 +30,10 @@ class App:
         """
         set app routine
         """
-        routine = self.build_routine
+        routine = self.do_routine
         schedule.every(env.INTERVAL).minutes.do(routine)
 
-    def build_routine(self):
+    def do_routine(self):
         """
         build app routine
         """

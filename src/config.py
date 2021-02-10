@@ -8,6 +8,7 @@ class DefaultConfig:
     PUSHOVER_USER = environ.get('PUSHOVER_USER')
     INTERVAL = int(environ.get('INTERVAL', default=30))
     HAS_PUSHOVER = environ.get('PUSHOVER_USER', default=True)
+    HAS_ROUTINE = environ.get('HAS_ROUTINE', default=False)
     IS_TESTING=False
 
 class Development(DefaultConfig):

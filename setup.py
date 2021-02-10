@@ -1,6 +1,5 @@
 import logging
 import locale
-import time
 
 from src.config import env
 from src.app import App
@@ -19,7 +18,7 @@ class Setup:
 
     def init_app(self):
         app = App()
+        app.do_routine()
 
-        while True:
+        if env.HAS_ROUTINE:
             app.start_routine()
-            time.sleep(1)
