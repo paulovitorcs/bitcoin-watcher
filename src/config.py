@@ -3,6 +3,7 @@ from os import environ
 class DefaultConfig:
     DEBUG = False
     APP_NAME = environ.get('APP_NAME', default='Basic Python Starter')
+    LOCALE = environ.get('LOCALE', default='pt_BR.UTF-8')
     PUSHOVER_TOKEN = environ.get('PUSHOVER_TOKEN')
     PUSHOVER_USER = environ.get('PUSHOVER_USER')
     INTERVAL = int(environ.get('INTERVAL', default=30))

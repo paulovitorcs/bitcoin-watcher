@@ -25,7 +25,6 @@ class Bitcoin:
         init bitcoin class
         """
         self.set_values()
-        locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
     def set_values(self):
         """

@@ -1,1 +1,1 @@
-worker: LANG=pt_BR python run.py
+worker: python run.py
