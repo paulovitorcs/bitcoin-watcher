@@ -3,7 +3,7 @@
 It watches Bitcoin [Foxbit Watcher API](https://watcher-docs.foxbit.com.br/) and notificates you throw [Pushover](https://pushover.net/) with current price and variation 
 
 ## Usage:
-You can install Pushover app and subscribe into [this channel](https://pushover.net/subscribe/BitcoinWatcher-bqd7vn6v7nu87yw) for current Bitcoin values in BRL for every 30 minutes
+You can install Pushover app and subscribe into [this channel](https://pushover.net/subscribe/DeOlhonoBitcoin-whrxw9eaz7dtxb1) for current Bitcoin values in BRL for every 30 minutes
 
 ## Installation:
 - Make sure you have [Python](https://www.python.org/) installed
