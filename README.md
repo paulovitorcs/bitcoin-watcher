@@ -16,3 +16,7 @@ python -m pip install -r requirements.txt
 ```bash
 python run.py
 ```
+## Routines:
+If you want to, you can set a optional routine with a interval. If enabled, you received a notification on the specified set time.
+- Set `HAS_ROUTINE` as `True`
+- Set `INTERVAL` with the interval minutes you desire
