@@ -1,4 +1,4 @@
-# Bitcoin Watcher
+# Bitcoin Watcher - De Olho no Bitcoin
 
 It watches Bitcoin [Foxbit Watcher API](https://watcher-docs.foxbit.com.br/) and notificates you throw [Pushover](https://pushover.net/) with current price and variation 
 
