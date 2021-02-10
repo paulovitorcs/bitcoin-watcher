@@ -5,7 +5,7 @@ class DefaultConfig:
     APP_NAME = environ.get('APP_NAME', default='Basic Python Starter')
     PUSHOVER_TOKEN = environ.get('PUSHOVER_TOKEN')
     PUSHOVER_USER = environ.get('PUSHOVER_USER')
-    INTERVAL = environ.get('PUSHOVER_USER', default=30)
+    INTERVAL = int(environ.get('INTERVAL', default=30))
     HAS_PUSHOVER = environ.get('PUSHOVER_USER', default=True)
     IS_TESTING=False
 

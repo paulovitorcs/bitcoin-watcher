@@ -25,7 +25,7 @@ class App:
         set app routine
         """
         routine = self.build_routine
-        schedule.every(int(env.INTERVAL)).minutes.do(routine)
+        schedule.every(env.INTERVAL).minutes.do(routine)
 
     def build_routine(self):
         """
