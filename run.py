@@ -1,8 +1,4 @@
-from src.app import App
-import time
+from setup import Setup
 
-app = App()
-
-while True:
-    app.start_routine()
-    time.sleep(1)
+setup = Setup()
+setup.init_app()

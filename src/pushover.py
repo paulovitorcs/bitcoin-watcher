@@ -1,3 +1,4 @@
+import logging
 from .config import env
 from requests import post
 
@@ -10,6 +11,7 @@ class Pushover:
         send post request to pushover app
         """
         if not type(data) == dict:
+            logging.error('There is a wrong data trying to do a post')
             raise TypeError('data should be a dict')
 
         request_data = {
@@ -30,4 +32,9 @@ class Pushover:
             'message': message
         }
 
-        return cls.do_post(data).ok
+        if cls.do_post(data).ok:
+            logging.info('Notification sent to Pushover')
+            return True
+
+        logging.error('Pushover Notification did not work')
+        return False

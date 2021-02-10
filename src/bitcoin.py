@@ -1,4 +1,5 @@
 import locale
+import logging
 from requests import get
 
 class Bitcoin:
@@ -15,6 +16,7 @@ class Bitcoin:
             'pair': currency,
         }
 
+        logging.info('Getting Bitcoin Data from Foxbit Watcher API')
         response = get(cls.API_URL, params)
         return response.json()
 

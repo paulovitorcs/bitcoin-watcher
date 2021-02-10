@@ -1,4 +1,5 @@
 import schedule
+import logging
 
 from .bitcoin import Bitcoin
 from .pushover import Pushover
@@ -30,6 +31,7 @@ class App:
         """
         build app routine
         """
+        logging.info('Running app routine')
         self.set_bitcoin_data()
 
         if self.has_pushover():
@@ -39,6 +41,7 @@ class App:
         """
         set bitcoin data
         """
+        logging.info('Setting bitcoin data')
         self.bitcoin = Bitcoin()
 
     def has_pushover(self):
@@ -66,5 +69,6 @@ class App:
         """
         send pushover notification message
         """
+        logging.info('Sending Pushover Notification')
         message = self.get_message()
         Pushover.send_notification(message['title'], message['text'])
