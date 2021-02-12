@@ -65,8 +65,8 @@ class App:
         get app message
         """
         message = {
-            'title': '$$ Chama no Bitcoin $$',
-            'text': '1 Bitcoin está valendo R$' + str(self.bitcoin.buy_price) + '!! Variação de ' + str(self.bitcoin.last_variation) + '%'
+            'title': '$$ Chama no ' + env.COIN + ' $$',
+            'text': '1 ' + env.COIN + ' está valendo R$' + str(self.bitcoin.buy_price) + '!! Variação de ' + str(self.bitcoin.last_variation) + '%'
         }
 
         return message

@@ -12,6 +12,7 @@ class DefaultConfig:
     IS_TESTING = False
     EXCHANGE = environ.get('EXCHANGE', default='Foxbit')
     CURRENCY = environ.get('CURRENCY', default='BRLXBTC')
+    COIN = environ.get('COIN', default='Bitcoin')
 
 class Development(DefaultConfig):
     INTERVAL = 1
