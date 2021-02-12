@@ -9,17 +9,19 @@ class DefaultConfig:
     INTERVAL = int(environ.get('INTERVAL', default=30))
     HAS_PUSHOVER = environ.get('PUSHOVER_USER', default=True)
     HAS_ROUTINE = environ.get('HAS_ROUTINE', default=False)
-    IS_TESTING=False
+    IS_TESTING = False
+    EXCHANGE = environ.get('EXCHANGE', default='Foxbit')
+    CURRENCY = environ.get('CURRENCY', default='BRLXBTC')
 
 class Development(DefaultConfig):
-    INTERVAL=1
+    INTERVAL = 1
     DEBUG = True
 
 class Production(DefaultConfig):
     ...
 
 class Testing(DefaultConfig):
-    IS_TESTING=True
+    IS_TESTING = True
     HAS_PUSHOVER = False
     INTERVAL=1
     PUSHOVER_TOKEN = environ.get('PUSHOVER_TOKEN_TEST', default=DefaultConfig.PUSHOVER_TOKEN)

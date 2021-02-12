@@ -1,19 +1,20 @@
 import locale
 import logging
 from requests import get
+from .config import env
 
 class Bitcoin:
     API_URL = 'http://watcher.foxbit.com.br/api/Ticker'
     values = None
 
     @classmethod
-    def get_values_from_api(cls, currency = 'BRLXBTC'):
+    def get_values_from_api(cls):
         """
         do get to api
         """
         params = {
-            'exchange': 'Foxbit',
-            'pair': currency,
+            'exchange': env.EXCHANGE,
+            'pair': env.CURRENCY,
         }
 
         logging.info('Getting Bitcoin Data from Foxbit Watcher API')
